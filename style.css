@@ -1,0 +1,435 @@
+/*
+Theme Name: JandJ
+Theme URI: http://JandJNaturalists.ca
+Author: Allan Kenneth
+Author URI: http://allankenneth.com
+Description: A custom theme made by Allan based on James' Illustrator layout design. Based on Bootstrap 3.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive, mobile-first
+Text Domain: jandj
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+SECTIONS:
+1. Default styling
+2. Tablets
+3. Desktop
+4. Wordpress Core
+*/
+/*
+* 1. Defaults (mobile & up)
+*/
+@font-face {
+    font-family: 'Optima';
+    src: url('fonts/Optima.eot');
+    src: url('fonts/Optima.eot') format('embedded-opentype'),
+         url('fonts/Optima.woff2') format('woff2'),
+         url('fonts/Optima.woff') format('woff'),
+         url('fonts/Optima.ttf') format('truetype'),
+         url('fonts/Optima.svg#Optima') format('svg');
+}
+body {
+	background-color: #4A5D5C;
+	color: #B9B9BB;
+	font-family: 'Optima', Verdana, sans-serif;
+	background-attachment: fixed !important;
+	background-position: top center !important;
+	background-repeat: no-repeat !import;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
+}
+h1 {
+	color: #B9B9BB;
+}
+p {
+	font-family: 24px;
+}
+img {
+	height: auto;
+	max-width: 100%;
+}
+a {
+	color: #CC9900;
+	text-decoration: none !important;
+}
+a:hover {
+	color: #FFF;
+}
+.current_page_item {
+	font-size: 18px;
+}
+.navbar {
+	background: transparent;
+}
+.navbar a {
+	font-size: 22px;
+}
+.navbar a:hover {
+	background: transparent !important;
+}
+.clearboth {
+	clear: both;
+}
+.menushow {
+	background: rgba(0,0,0,.9);
+	border: 1px solid rgba(204,153,0,.6);
+	border-radius: 4px;
+	color: #B9B9BB;
+	display: inline-block;
+	margin: 15px 15px 0 0;
+	padding: 0 5px;
+}
+.navbar a.menushow:hover {
+	background: #3F2913 !important;
+
+}
+.menupanel {
+	display: none;
+
+}
+.menupanel li {
+	list-style-type: none;
+}
+#mmenu {
+	display: none;
+}
+.container {
+	/* We want to to override bootstrap and 
+	   restrict large devices to medium width */
+	max-width: 960px; 
+}
+.logo {
+}
+.section {
+	margin: 0 0 30px 0;
+}
+.card,
+.panel {
+	background: rgba(0,0,0,.9);
+	border-radius: 10px;
+	color: #B9B9BB;
+	margin: 0 0 30px 0;
+	padding: 15px;
+}
+.card.dark {
+	background: #000;
+}
+.panel h2,
+.card h2 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: -5px 0 4px 0;
+	text-align: center;
+}
+.panel ul {
+	margin: 0;
+	-webkit-padding-start: 0;
+}
+.panel li {
+	list-style-type: none;
+}
+.card ul {
+	border: 0;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+}
+.card li {
+	display: block;
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 7px;
+	text-decoration: none;
+	width: 50%;
+}
+.card .nofloat li {
+	float: none;
+	width: 100%;
+}
+.card li.current_page_item a,
+.card li.current_page_ancestor a {
+	background: #3F2913;
+}
+.card a {
+	border: 1px solid rgba(204,153,0,.6);
+	border-radius: 4px;
+	color: #999;
+	display: block;
+	font-size: 18px;
+	line-height: 18px;
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	/* The following vertically aligns the text in cool browsers */
+	display: flex; /* ues table for better xbrowser? */
+	justify-content: center;
+	flex-direction: column;
+	height: 50px;
+}
+/* 
+There's a smarter way of doing this, where you only have one rule and it selects 
+the first two children, but every other way I tried it, it failed. This works.
+*/
+.card li:nth-child(1),
+.card li:nth-child(2) {
+	padding-top: 0;
+}
+.card li:nth-child(even) {
+	padding-right: 0;
+}
+.card li:nth-child(odd) {
+	padding-left: 0;
+}
+/* 
+There's a smarter way of doing this, where you only have one rule and it selects 
+the last two children (supposedly -n-2, but that shit don't work),
+but every other way I tried it, it failed. This works.
+*/
+.card li:nth-last-child(1),
+.card li:nth-last-child(2) {
+	padding-bottom: 0;
+}
+.card a.social {
+	border: 0;
+	display: inline-block;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+.shop a {
+	margin-bottom: 14px;
+}
+.page-item-38 a {
+	padding: 5px 10px;
+}
+h2.commonspecies {
+	margin: -5px 0 10px 0;
+}
+.menu {
+	background: rgba(0,0,0,.8);
+	border: 1px solid rgba(204,153,0,.6);
+	border-radius: 4px;
+	color: #999;
+	display: block;
+	font-size: 18px;
+	line-height: 18px;
+	margin: 18px 20px 0 0;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.thumb {
+	margin: 0 0 15px 0;
+}
+.childtitle {
+	display: block;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.speciestitle {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 5px 0 20px 0;
+}
+.speciestitle a {
+	color:#CC9900;	
+}
+.speciestitle span {
+	font-size: 14px;
+	font-style: italic;
+	font-weight: normal;
+}
+.enjoy {
+	font-size: 16px;
+	text-align: center;
+}
+.enjoy:first-child {
+	margin-top: 20px;
+}
+#blinkered {
+	position: absolute;
+	right: 0px;
+	top: 60px;
+	z-index: 100;
+	width: 320px;
+}
+.searchform {
+	margin: 0 0 14px 0;
+}
+#searchsubmit {
+	padding: 4px 10px;
+}
+.searchform input {
+	border: 1px solid rgba(204,153,0,.6);
+	border-radius: 4px;
+	background: rgba(0,0,0,.5);
+	font-size: 18px;
+	padding: 4px;
+}
+#s {
+	width: 180px;
+}
+.textwidget {
+	margin: 14px 0 0 0;
+}
+
+/* TODO USE BOOTSTRAPS BREAKPOINTS FOR THE THIS!! */ 
+
+
+@media (max-width : 480px) {
+    body.custom-background {
+        background-image: none !important;
+    }
+#site-logo {
+	width: 260px;	
+}
+
+}
+
+
+*
+ * 2. Tablets
+ */
+@media only screen and (min-width: 550px) {
+
+h1 {
+}
+
+}
+/*
+* 3. Desktops
+*/
+@media only screen and (min-width: 1024px) {
+#mmenu {
+	position: absolute;
+	right: 0;
+	top: 60px;
+	width: 300px;
+	z-index: 3000;
+}
+h1 {
+}
+
+
+
+}
+
+
+
+
+/* 4. WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+

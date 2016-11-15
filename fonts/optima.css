@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Optima';
+    src: url('fonts/Optima.eot');
+    src: url('fonts/Optima.eot') format('embedded-opentype'),
+         url('fonts/Optima.woff2') format('woff2'),
+         url('fonts/Optima.woff') format('woff'),
+         url('fonts/Optima.ttf') format('truetype'),
+         url('fonts/Optima.svg#Optima') format('svg');
+}
