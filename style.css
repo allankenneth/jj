@@ -155,7 +155,7 @@ a:hover {
 .card li.current_page_ancestor a {
 	background: #3F2913;
 }
-.card a {
+.card li a {
 	border: 1px solid rgba(204,153,0,.6);
 	border-radius: 4px;
 	color: #999;
@@ -201,9 +201,6 @@ but every other way I tried it, it failed. This works.
 	height: auto;
 	padding: 0;
 	margin: 0;
-}
-.shop a {
-	margin-bottom: 14px;
 }
 .page-item-38 a {
 	padding: 5px 10px;

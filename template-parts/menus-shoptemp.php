@@ -1,5 +1,6 @@
-<a href="#">Desktop Images</a>
-<a href="#">Prints &amp; Canvases</a>
-<a href="#">Phenological Calendar</a>
-<a href="#">Stock Photography</a>
-
+<ul>
+<li><a href="#">Desktop Images</a></li>
+<li><a href="#">Prints &amp; Canvases</a></li>
+<li><a href="#">Phenological Calendar</a></li>
+<li><a href="#">Stock Photography</a></li>
+</ul>

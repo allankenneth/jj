@@ -12,12 +12,14 @@
 	<?php echo get_the_post_thumbnail($eldest, 'medium'); ?>
 	<?php endif; ?>
 </div>
+<?php if($eldest): ?>
 <ul>
 <?php
 $children = wp_list_pages("title_li=&child_of=" . $eldest . "&echo=0&depth=1");
 echo $children;
 ?> 
 </ul>
+<?php endif; ?>
 <div class="clearboth"></div>
 </div>
 
